@@ -1,9 +1,12 @@
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
-const {Puerto} = require('./Config/index');
-require('dotenv').config()
+const {PORT} = require('./Config/index');
 const app = express();
+
+// base de datos
+const Database = require('./Config/database');
+Database.connect();
 
 // Peticiones y convertir a json
 app.use(cors());
@@ -13,9 +16,7 @@ app.use(bodyParser.urlencoded({
 }))
 
 // creando rutas del proyecto
-app.use('/',require('./routes/routes.routes'))
-
-const PORT = process.env.PORT?process.env.PORT:Puerto
+app.use('/',require('./routes/routes.routes'));
 
 // Creando puertos del servidor 
 app.listen(PORT,()=>{
