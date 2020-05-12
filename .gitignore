@@ -1,0 +1,7 @@
+  
+*.jpg
+*.png
+/node_modules
+/img
+.env
+.git
