@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 
-const ProductoSchema = new mongoose.Schema({
+const ProductosSchema = new mongoose.Schema({
     name: {
         type: String,
         required: true
@@ -21,7 +21,8 @@ const ProductoSchema = new mongoose.Schema({
             'teclados',
             'forros',
             'vidrios',
-            'popsokets',
+            'accesorioscell',
+            '',
             'otro'
         ]
     },
@@ -37,6 +38,6 @@ const ProductoSchema = new mongoose.Schema({
 });
 
 
-const Producto = mongoose.model('Producto', ProductoSchema);
+const Productos = mongoose.model('Productos', ProductosSchema);
 
-module.exports = Producto;
+module.exports = Productos;
