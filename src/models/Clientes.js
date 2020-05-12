@@ -28,7 +28,7 @@ const ClientesSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    direecion: {
+    direccion: {
         type: String,
         required: true
     }
