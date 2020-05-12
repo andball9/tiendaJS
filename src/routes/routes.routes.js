@@ -1,8 +1,6 @@
 const express = require('express');
-const routes = express.Router();
+const app = express();
 
-const {Usuarios} = require('../Controllers/index')
-
-routes.get('/usuarios',Usuarios.index)
-
-module.exports = routes;
+app.use('/usuarios',require('./Usuarios'));
+app.use('/productos',require('./Productos'))
+module.exports = app;
