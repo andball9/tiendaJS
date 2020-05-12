@@ -27,7 +27,8 @@ function login(req,res){
                                 email: user.email,
                                 name: user.name,
                                 role: user.role,
-                                id:user._id
+                                id:user._id,
+                                tipo:user.tipo
                             }
                             //Acceso
                             //Crea token secreto
@@ -71,8 +72,8 @@ function loginCliente(req,res){
                                 username: user.username,
                                 email: user.email,
                                 name: user.name,
-                                role: user.role,
-                                id:user._id
+                                id:user._id,
+                                tipo:user.tipo
                             }
                             //Acceso
                             //Crea token secreto

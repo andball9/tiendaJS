@@ -31,6 +31,10 @@ const ClientesSchema = new mongoose.Schema({
     direccion: {
         type: String,
         required: true
+    },
+    tipo:{
+        type:String,
+        default:'cliente'
     }
 });
 
