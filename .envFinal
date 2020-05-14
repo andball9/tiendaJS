@@ -1,2 +1,0 @@
-PORT = 2000
-DB = mongodb+srv://ivan1234:99120900389@tiendapipe-c6bxx.mongodb.net/test?retryWrites=true&w=majority
